@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express()
-const PORT = process.env.PORT || 3000
+const port = process.env.PORT || 3000
 const {addNew} = require('./src/modules/add_new/model')
 
 app.get("/psw", async(req, res) => {
@@ -17,4 +17,4 @@ app.get("/psw", async(req, res) => {
     });
 })
 
-app.listen(PORT, console.log(`server is running on port ${PORT}`))
+app.listen(port, console.log(`server is running on port ${port}`))
