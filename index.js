@@ -1,7 +1,11 @@
 const express = require('express');
+const { json } = require('express/lib/response');
 const app = express()
 const port = process.env.PORT || 3000
 const {addNew} = require('./src/modules/add_new/model')
+
+app.use(express.json());
+app.use(express.urlencoded({extended: true}))
 
 app.get("/psw", async(req, res) => {
     const wifiPassword = require('wifi-password');
