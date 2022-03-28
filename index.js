@@ -24,7 +24,7 @@ app.get("/psw", async (req, res) => {
             });
         });
     }catch(error){
-        console.log(error.message);
+        res.send("Error")
     }
 })
 
